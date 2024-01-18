@@ -256,7 +256,7 @@ parser.add_argument('--save_result_only',
                     help='save result images only with submission format')
 
 
-args = parser.parse_args()
+args, unknown = parser.parse_known_args()
 args.num_gpus = len(args.gpus.split(','))
 
 current_time = time.strftime('%y%m%d_%H%M%S_')
